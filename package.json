@@ -1,0 +1,32 @@
+{
+  "name": "bottle-helper",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "three": "^0.168.0",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@mirite/eslint-config-mirite": "^0.0.5",
+    "@tailwindcss/forms": "^0.5.9",
+    "@types/three": "^0.168.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.11.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.29"
+  },
+  "packageManager": "yarn@4.5.0"
+}
