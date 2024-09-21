@@ -34,11 +34,12 @@ function createJar() {
     meshHeight.value,
   );
   const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-  cylinder = new THREE.Mesh(geometry, [
+  const c = new THREE.Mesh(geometry, [
     material,
     new THREE.MeshBasicMaterial({ color: 0xff0000 }),
     new THREE.MeshBasicMaterial({ color: 0x00ff00 }),
   ]);
+  return c;
 }
 
 onMounted(() => {
@@ -48,7 +49,7 @@ onMounted(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 
-    const renderer = new THREE.WebGLRenderer({ antialiasing: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio * 1.5);
     renderer.setSize(width, height);
 
@@ -56,7 +57,7 @@ onMounted(() => {
     const floor = createFloor();
 
     scene.add(floor);
-    createJar();
+    cylinder = createJar();
     cylinder.position.y = -2 + meshHeight.value / 2;
     scene.add(cylinder);
 

@@ -17,6 +17,7 @@
   "devDependencies": {
     "@mirite/eslint-config-mirite": "^0.0.5",
     "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/three": "^0.168.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "autoprefixer": "^10.4.20",
