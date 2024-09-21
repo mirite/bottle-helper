@@ -6,13 +6,15 @@ FROM node AS deps
 
 WORKDIR /app
 
-COPY yarn.lock .
+COPY ./.yarnrc.yml .
 COPY package.json .
+COPY yarn.lock .
 RUN yarn install
 
 FROM node AS build
 WORKDIR /app
 
+COPY --from=deps /app/.yarnrc.yml .
 COPY --from=deps /app/package.json ./package.json
 COPY --from=deps /app/yarn.lock ./yarn.lock
 COPY --from=deps /app/node_modules ./node_modules
